@@ -1,0 +1,76 @@
+<%= form_for(@order) do |f| %>
+  <% if @order.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@order.errors.count, "error") %> prohibited this order from being saved:</h2>
+
+      <ul>
+      <% @order.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field form-group">
+    <table class='contact-info-table table'>
+      <tr>
+        <td>
+          <%= f.label :name %>
+        </td>
+        <td style="padding-left: 20px">
+          <%= f.text_field :name, class: 'form-control' %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <%= f.label :address %>
+        </td>
+        <td style="padding-left: 20px">
+          <%= f.text_area :address, class: 'form-control', rows: 3 %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <%= f.label :quantity %>
+        </td>
+        <td style="padding-left: 20px">
+          <%= f.number_field :quantity, class: 'form-control', value: 1, min: 1 %>
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td style="padding-left: 20px">
+          <div class='btn btn-default' id='refresh_price'><i class="fa fa-refresh fa-lg"></i> Update price</div>
+        </td>
+      </tr>
+      <tr class='warning'>
+        <td>
+          <label>Price:</label>
+        </td>
+        <td style="padding-left: 20px" id="quantity_x_price">
+          $8.95
+        </td>
+      </tr>
+      <tr class='warning'>
+        <td>
+          <label>Shipping:</label>
+        </td>
+        <td style="padding-left: 20px" id="shipping_price">
+          $2.00
+        </td>
+      </tr>
+      <tr class='warning'>
+        <td>
+          <label>Total:</label>
+        </td>
+        <td style="padding-left: 20px" id='total_price'>
+          $10.95
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="actions">
+    <%= f.submit 'Place Order', class: 'btn btn-primary btn-lg' %>
+  </div>
+
+<% end %>
