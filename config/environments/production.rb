@@ -1,4 +1,9 @@
 FreeExpressions::Application.configure do
+
+  # For Heroku
+  config.assets.initialize_on_precompile = false
+
+
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
