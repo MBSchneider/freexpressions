@@ -2,6 +2,8 @@
 <html>
 <head>
   <title>Free Expressions</title>
+  <meta name="AUTHOR" content="Merilee Brigham, RN, BSN, IBCLC, RLC">
+  <meta name="KEYWORDS" content="Hands-free pumping, hands-free, breast, breast pumping, breast pump, mothers, babies, baby, lactation, lactating, breastfeeding, nursing mothers, breast pumping cord, lactation aid, breast-feed, breastfeed, breast-feeding, electric breast pump, NW Center, Northwest Center, Freexpressions provides work for people with disabilities through NW Center Assembly and Packaging division, ">
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
@@ -10,9 +12,14 @@
 </head>
 
 <body style='padding-top: 60px'>
+  <%= render 'layouts/navbar' %>
 
-<%= render 'layouts/navbar' %>
-<%= yield %>
+  <% flash.each do |name, msg| -%>
+    <%= content_tag :div, msg, class: 'alert alert-dismissable alert-' + name %>
+  <% end %>
+
+
+  <%= yield %>
 
 </body>
 </html>

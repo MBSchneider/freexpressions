@@ -10,6 +10,13 @@ class PagesController < ApplicationController
   def video
   end
 
+  def success
+    redirect_to pages_path, flash: {'success' => 'Thank you for your order!'}
+  end
+
+  def cancel
+    redirect_to new_order_path, flash: {'danger' => 'Your order was cancelled.'}
+  end
 
   # GET /pages
   # GET /pages.json
