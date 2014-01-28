@@ -2,6 +2,7 @@ FreeExpressions::Application.configure do
 
   # For Heroku
   config.assets.initialize_on_precompile = false
+  config.serve_static_assets = true
 
 
   # Settings specified here will take precedence over those in config/application.rb.
