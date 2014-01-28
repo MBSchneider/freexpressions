@@ -2,7 +2,8 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
-$ ->
+window.set_listeners = ->
+  console.log "listeners set"
   $("#order_quantity").on "change", ->
     console.log "change"
     update_price()
