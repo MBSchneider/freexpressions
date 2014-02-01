@@ -39,7 +39,7 @@ describe "Navigating: " do
 
       find('.navbar').click_link('Purchase')
 
-      page.should have_content('Shipping:')
+      page.should have_content('24 or less:')
     end
 
     it "Jumbotron works" do
@@ -47,7 +47,7 @@ describe "Navigating: " do
 
       click_link 'Buy now!'
 
-      page.should have_content('Shipping:')
+      page.should have_content('25 or more:')
     end
   end
 end

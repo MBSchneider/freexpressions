@@ -2,23 +2,35 @@
 <script type='text/javascript'>
 $(document).ready(function(){
   window.set_listeners();
+  $('#purchase_link').addClass('active');
 })
 </script>
-
 </head>
 
 <div class="container">
   <div class="row">
     <div class='col-md-3' style='margin-top: 20px'>
       <%= image_tag 'Picture1.png', size: "179x213" %>
+      <table class='table'>
+        <tr><th colspan="2" class='text-primary'>
+          <strong>Pricing:</strong>
+        </th></tr>
+        <tr>
+          <td>24 or less:</td>
+          <td><strong>$8.95</strong> each</td>
+        </tr>
+        <tr>
+          <td>25 or more:</td>
+          <td>
+            <strong>$6.00</strong> each<br />
+            <span class='text-primary'>33% discount!</span>
+          </td>
+        </tr>
+      </table>
     </div>
     <div class='col-md-9'>
-      <h1>New order</h1>
+      <h1 >New order</h1>
       <%= render 'form' %>
-
-
-
-
     </div>
   </div>
 </div>

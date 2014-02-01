@@ -18,8 +18,9 @@ window.set_listeners = ->
 
 update_price = ->
   console.log "funct"
-  quantity_x_price = (8.95 * $("#order_quantity").val())
+  quantity = $("#order_quantity").val()
+  if quantity < 25
+    quantity_x_price = (8.95 * $("#order_quantity").val())
+  else
+    quantity_x_price = (6.00 * $("#order_quantity").val())
   $("#quantity_x_price").html '$' + quantity_x_price.toFixed(2)
-  total_price = parseFloat($("#shipping_price").html().split("$")[1])\
-                + quantity_x_price
-  $("#total_price").html('$' + total_price.toFixed(2))

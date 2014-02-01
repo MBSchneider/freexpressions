@@ -28,22 +28,6 @@
           $8.95
         </td>
       </tr>
-      <tr class='warning'>
-        <td>
-          <label>Shipping:</label>
-        </td>
-        <td style="padding-left: 20px" id="shipping_price">
-          $2.00
-        </td>
-      </tr>
-      <tr class='warning'>
-        <td>
-          <label>Total:</label>
-        </td>
-        <td style="padding-left: 20px" id='total_price'>
-          $10.95
-        </td>
-      </tr>
     </table>
   </div>
 
@@ -51,7 +35,7 @@
     <%= f.submit 'Place Order', class: 'btn btn-primary btn-lg' %>
   </div>
   <div>
-    <table border="0" cellpadding="10" cellspacing="0" align="right"><tr><td align="center"></td></tr><tr><td align="center"><a href="https://www.paypal.com/webapps/mpp/paypal-popup" title="How PayPal Works" onclick="javascript:window.open('https://www.paypal.com/webapps/mpp/paypal-popup','WIPaypal','toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=1060, height=700'); return false;"><img src="https://www.paypalobjects.com/webstatic/mktg/logo/AM_SbyPP_mc_vs_dc_ae.jpg" border="0" alt="PayPal Acceptance Mark"></a></td></tr></table>
+    <table border="0" cellpadding="10" cellspacing="0" align="right"><tr><td align="center"></td></tr><tr><td align="center"><a href="https://www.paypal.com/webapps/mpp/paypal-popup" title="How PayPal Works" onclick="javascript:window.open('https://www.paypal.com/webapps/mpp/paypal-popup','WIPaypal','toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=1060, height=700'); return false;"><%= image_tag 'paypal.jpg', border: "0", alt: "PayPal Acceptance Mark" %></a></td></tr></table>
   </div>
 
 <% end %>
