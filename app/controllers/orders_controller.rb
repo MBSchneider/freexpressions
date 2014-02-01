@@ -29,6 +29,8 @@ class OrdersController < ApplicationController
     respond_to do |format|
       if @order.save
         # puts @order.paypal_url
+        puts "controller"
+        puts @order.paypal_url
         format.html { redirect_to @order.paypal_url, notice: 'Order was successfully submitted.' }
         format.json { render action: 'show', status: :created, location: @order }
       else
