@@ -17,10 +17,12 @@ class Order < ActiveRecord::Base
 
     if Rails.env.production?
       values[:business] = ENV["PAYPAL_USR_PROD"]
-      "https://www.paypal.com/cgi-bin/webscr?" + values.to_query
+      puts "Production"
+      puts "https://www.paypal.com/cgi-bin/webscr?" + values.to_query
+      return "https://www.paypal.com/cgi-bin/webscr?" + values.to_query
     else
       values[:business] = ENV["PAYPAL_USR"]
-      "https://www.sandbox.paypal.com/cgi-bin/webscr?" + values.to_query
+      return "https://www.sandbox.paypal.com/cgi-bin/webscr?" + values.to_query
     end
   end
 end
