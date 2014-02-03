@@ -20,7 +20,7 @@ class PagesController < ApplicationController
 
   # GET /pages
   # GET /pages.json
-  def index
+  def index(message = nil)
     @pages = Page.all
   end
 
