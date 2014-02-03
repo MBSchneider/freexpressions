@@ -6,7 +6,8 @@ class Order < ActiveRecord::Base
       :cmd => '_xclick',
       :invoice => id,
       :quantity => self.quantity,
-      :item_name => 'Freexpressions cord'
+      :item_name => 'Freexpressions cord',
+      :weight => 0.13
     }
     if self.quantity >= 25
       values[:discount_amount] = 2.95
