@@ -17,10 +17,8 @@ class Order < ActiveRecord::Base
     if Rails.env.production?
       values[:business] = ENV["PAYPAL_USR_PROD"]
       values[:hosted_button_id] = ENV["PAYPAL_BTNID_PROD"]
-      values[:return] = 'http://freexpressions.herokuapp.com/success'
-      values[:cancel_return] = 'http://freexpressions.herokuapp.com/cancel'
-      puts "Production"
-      puts "https://www.paypal.com/cgi-bin/webscr?" + values.to_query
+      values[:return] = 'http://www.freexpressions.com/success'
+      values[:cancel_return] = 'http://www.freexpressions.com/cancel'
       return "https://www.paypal.com/cgi-bin/webscr?" + values.to_query
     else
       values[:business] = ENV["PAYPAL_USR"]
