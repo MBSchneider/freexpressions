@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-FreeExpressions::Application.config.secret_key_base = '2003f089f973715a713aa0cfb45c2db021e0ff0f6e40deee880609368dbaed6bcc569597fad82501fde117ca171c7e84483333eed44f4a75df973dae9bf85f44'
+FreeExpressions::Application.config.secret_key_base = ENV['SECRET_TOKEN']
