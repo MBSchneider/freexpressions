@@ -2,6 +2,8 @@
 
 By [Matt Schneider](github.com/MBSchneider)
 
+[![Travis](https://travis-ci.org/MBSchneider/freexpressions.png)](https://travis-ci.org/MBSchneider/freexpressions)
+
 **Freexpressions Web Application**
 A simple application to create orders for Freexpressions devices.  See it at [http://www.freexpressions.com/](http://www.freexpressions.com/)
 
