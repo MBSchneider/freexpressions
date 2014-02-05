@@ -7,7 +7,6 @@ group :development, :test do
   gem 'launchy'
   gem 'database_cleaner'
   gem 'selenium-webdriver'
-
   gem 'sqlite3'
 end
 

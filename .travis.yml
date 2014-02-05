@@ -1,0 +1,16 @@
+language: ruby
+rvm:
+- 2.0.0
+env:
+  matrix:
+  - secure: K3dSb1iroXPGZBrku+o+oFvYgge9C5GrJIRtGmBQxFFfM60dZEVY7uVxawO7OiXcAHnJao/eW7D5eIDq3uGW4XHJY3yiBU8foBCuo6w0/dwJO6Zk04/T3L5hswVpJA+epZuGtNMvxCKSB0YcQNSUiOIvUecD1wwwsCZzamf64Yw=
+  - secure: O7rFBxLf9+ntlNURygeLlH0TUXZqMu8RA+o4tXk6f9B7/uFRGkrYCtgI7uCuNdgreCHTCYYgJy2Exq9GD1wh5Ph1CrxgTHpQ1qxSUhPnMyeksSuGNGkCbl89FWco/9IlZL5u3hDsCK2zg/7uBynEm2vULK5eCgWebN6ErM1wBRQ=
+  - secure: OA6c5pKA5uUrO+8nYZ+qDc3ufdwUwi7z/lADBKRz/FWJ1UJsEd3w3GAXqTANEpGaUL+efkfTN/Ipt7XfLKpXkgvV3Ua9FAdn0LrcUlXFrOb0DZESQR/n51420f2ZJjmnhjrsBIZipYuhKOMjOwQqSBX9BZo/CyzTBMcfNxg6cPU=
+  - secure: FoZJHN5p1kt1VPGBEhPFOjsGdnLfAHpu8SANXgjDKNGuXnO3SvBVSTJvH2obCLKvfYUhub/N/gQmlDcSbjPl9ajVlaeR1gOD9SBcc3hANxlEDMRj9kuQVe2Y0PqTR0rt7wHHzW87qDouWprzg1olepRx0evdcngDe08iVL0+ick=
+script:
+- RAILS_ENV=test bundle exec rake db:migrate --trace
+- bundle exec rake db:test:prepare
+- bundle exec rake routes
+- bundle exec rspec
+- rails -v
+bundler_args: --binstubs=./bundler_stubs
