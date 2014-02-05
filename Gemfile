@@ -18,6 +18,7 @@ end
 
 gem 'figaro'
 gem 'pry'
+gem 'travis'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
